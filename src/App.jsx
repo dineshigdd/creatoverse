@@ -24,7 +24,7 @@ function App() {
           console.log("error",error)
           return;
         }
-      
+      console.log( data)
       setCreators(data);    
   }
   fetchCreators();

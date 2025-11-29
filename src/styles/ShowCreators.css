@@ -1,0 +1,11 @@
+.container{
+   display:flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.grid{
+    width:100vw;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:50px 1.8em;   
+}
