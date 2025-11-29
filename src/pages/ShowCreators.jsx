@@ -10,9 +10,13 @@ function ShowCreators( { creators }) {
         <div className='grid'>
             { creators?.length == 0 ? (<div>No creators</div>) : creators?.map( (creator) => (
                     
-                          <article className='grid-item'>
+                          <article 
+                              key={creator.id  }
+                              className='grid-item'
+                              
+                          >
                             <Card 
-                            key={creator.id  }
+                          
                             name={creator.name}
                             url={creator.url}
                             description={creator.description}
