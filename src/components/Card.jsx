@@ -4,21 +4,24 @@ import '../styles/Card.css'
 
 function Card({ name, url, description, imageURL}) {
   return (
-    <div>  
-        <div className='card' style={{ backgroundImage: `url(${ imageURL })`}}>
-            <div>{name}</div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            <div>
-                <a href={ url } target="_blank" rel="noopener noreferrer">
-                  <FaYoutube
-                  size={ 30 }
-                  color='#FF0000'        
-                />   
-              </a>
+    <div className='card'>     
+             <img src={ imageURL }/>
+             <div className='content-container'>
+                   <div className='content'>
+                  <div>{name}</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                  <div>
+                      <a href={ url } target="_blank" rel="noopener noreferrer">
+                        <FaYoutube
+                        size={ 30 }
+                        color='#FF0000'        
+                      />   
+                    </a>
+                  </div>
+                  <div className='description'>{ description}</div>           
             </div>
-            <div>{ description}</div>
-            {/* <div><img src={ imageURL }/></div> */}
-      </div>
+
+             </div>
+            
     </div> 
   )
 }

@@ -5,11 +5,14 @@
 }
 
 .grid{
-    width:100vw;
+    width:65vw;
+    height:65vw;
     grid-template-columns: repeat(2,1fr);
     grid-gap:50px 1.8em;   
 }
 
 .grid-item {
    /* background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)) */
+  
+    
 }

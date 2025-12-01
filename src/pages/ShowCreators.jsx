@@ -8,21 +8,15 @@ function ShowCreators( { creators }) {
   return (
     <div className='container'>
         <div className='grid'>
-            { creators?.length == 0 ? (<div>No creators</div>) : creators?.map( (creator) => (
-                    
-                          <article 
-                              key={creator.id  }
-                              className='grid-item'
-                              
-                          >
+            { creators?.length == 0 ? (<div>No creators</div>) : creators?.map( (creator) => (                    
+                         
                             <Card 
-                          
+                             key={creator.id  }
                             name={creator.name}
                             url={creator.url}
                             description={creator.description}
                             imageURL={creator.imageURL}
-                            />
-                          </article>               
+                            />         
                         
             ))}
        </div>
