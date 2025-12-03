@@ -10,7 +10,7 @@
     width:500px;
 }
 
-.content-container {
+.card-content-container {
     position: absolute;
     top: 0;
     background: rgb( 0,0,0);
@@ -21,33 +21,33 @@
     padding: 20px;
 }
 
-.content {
+.card-content {
     position: relative;
     top:40%;    
 }
 
-.name-info-edit-links-container{
+.card-name-info-edit-links-container{
     display: flex;
     justify-content: space-between;
  
 }
 
-.name{
+.card-name{
     color: #508483;
     font-size:larger;
     font-weight:bold;
 }
 
-.info-edit-links a{
+.card-info-edit-links a{
     padding: 5px;  
     margin-right: 5px;    
 }
 
-.social-media-links-container a{
+.card-social-media-links-container a{
     padding-right: 10px;   
 }
 
-.description{
+.card-description{
     color:whitesmoke;
     font-size: large;
     margin-top:10px ;
