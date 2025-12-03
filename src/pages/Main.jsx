@@ -17,6 +17,7 @@ function Main() {
           <h1>CREATOVERSE</h1>
           <Link 
             role="button" 
+            to='/'
             onClick={ ()=>setState( <ShowCreators /> )} 
             >view all creators
           </Link>

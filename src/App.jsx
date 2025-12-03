@@ -4,7 +4,7 @@ import Main from './pages/Main'
 import ShowCreators from './pages/ShowCreators'   
 import AddCreator from './pages/AddCreator'
 import EditCreators from './pages/EditCreators'
-import ViewCreators from './pages/ViewCreators'
+import ViewCreator from './pages/ViewCreator'
 import { Children, useEffect, useState } from 'react'
 import { supabase } from './client'
 
@@ -48,8 +48,8 @@ function App() {
           element:<EditCreators />
         },
         {
-          path:"view-creators",
-          element:<ViewCreators />
+          path:"view-creator/:id",
+          element:<ViewCreator />
         }    
       ]
     },
