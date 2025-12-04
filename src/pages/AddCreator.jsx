@@ -23,7 +23,7 @@ function AddCreator() {
   return (
     <div className='container'>
       <form onSubmit={ handleSubmit }>
-        <label>name
+        <label>Name
           <input type='text' onChange={ ( e )=> setName( e.target.value )} />
         </label>
 
@@ -32,11 +32,11 @@ function AddCreator() {
         </label>
 
 
-        <label>description
+        <label>Description
           <input type='text' onChange={ ( e )=> setDescription( e.target.value )}/>
         </label>
 
-       <label>imageUrl
+       <label>image Url
           <input type='text'  onChange={ ( e )=> setimageURL( e.target.value )}/>
         </label>
         <button type='submit'>Submit</button>

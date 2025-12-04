@@ -65,7 +65,7 @@ function ViewCreator() {
                                   <span>@{  creator.url }</span>                    
                               </a>
                             
-                            <a href={ socialMediaLinks.youtube + creator.url  }
+                            <a href={ socialMediaLinks.x + creator.url  }
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     <FaTwitter
@@ -75,7 +75,7 @@ function ViewCreator() {
                                   <span>@{  creator.url }</span>                    
                               </a>
 
-                              <a href={ socialMediaLinks.youtube + creator.url  }
+                              <a href={ socialMediaLinks.instagram + creator.url  }
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     <FaInstagram
