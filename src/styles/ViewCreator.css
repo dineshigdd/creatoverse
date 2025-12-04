@@ -1,8 +1,8 @@
-.container{
+/* .container{
    display:flex;
    justify-content: center;
    margin-top: 50px;
-}
+} */
 
 .profile-container{
     grid-template-columns: 1fr 1fr;
