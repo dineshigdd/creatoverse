@@ -31,8 +31,7 @@ function ViewCreator() {
         }
     
        
-      data && setCreator( data.filter( ( element ) => element.id == id )); 
-   
+      data && setCreator( data.filter( ( element ) => element.id == id ));  
      
        
   }

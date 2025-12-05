@@ -4,7 +4,7 @@ import '../styles/ShowCreators.css'
 
  
 
-function ShowCreators( { creators, limit }) { 
+function ShowCreators( { creators }) { 
 
   return (
     <div className='container'>

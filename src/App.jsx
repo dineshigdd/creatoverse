@@ -40,7 +40,7 @@ function App() {
         element:<Main/>,        
         children:[
         {
-          index:true,   
+          index:'true',   
           element:<ShowCreators creators = { creators.slice(0,5)} />        
         },
         {
@@ -53,7 +53,7 @@ function App() {
           element:<AddCreator />
         },
         { 
-          path:"edit",
+          path:"edit/:id",
           element:<EditCreators />
         },
         {

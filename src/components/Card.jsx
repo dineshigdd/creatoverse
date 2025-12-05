@@ -20,13 +20,13 @@ function Card( { creator } ) {
                       <div className="card-name-info-edit-links-container">
                             <div className='card-name'>{name}</div>   
                             <div className='card-info-edit-links'>
-                                <Link to={`view-creator/${ id }`}>
+                                <Link to={`/creator/${ id }`}>
                                   <FaInfoCircle  
                                     size={ 25 }
                                     color="#FFFFFF"
                                   />
                                 </Link>
-                                <Link>
+                                <Link to={`/edit/${ id }`}>
                                   <FaPen
                                     size={ 25 }
                                     color="#FFFFFF"
