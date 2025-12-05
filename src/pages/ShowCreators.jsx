@@ -2,9 +2,10 @@ import React from 'react'
 import Card from '../components/Card'
 import '../styles/ShowCreators.css'
 
+ 
 
-function ShowCreators( { creators }) {
-    
+function ShowCreators( { creators, limit }) { 
+
   return (
     <div className='container'>
         <div className='grid'>

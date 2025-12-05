@@ -6,10 +6,7 @@ import '../styles/Main.css'
 
 
 function Main() {
-  const [ state, setState ] = useState();
-  useEffect(()=>{
-      
-  },[])
+ 
   return (
     <main>
     <div id="hero" className='container-fluid center'>
@@ -17,12 +14,11 @@ function Main() {
           <h1>CREATOVERSE</h1>
           <Link 
             role="button" 
-            to='/'
-            onClick={ ()=>setState( <ShowCreators /> )} 
+            to='/creators'      
             >view all creators
           </Link>
 
-          <Link role="button" to='add-creator'>add a creator</Link>
+          <Link role="button" to='new'>add a creator</Link>
       </div>            
     </div>
     <section>

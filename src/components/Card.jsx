@@ -48,7 +48,7 @@ function Card( { creator } ) {
                         color='#FFFFFF'        
                       />   
                     </a> 
-                     <a href={ socialMediaLinks.instagram +'/' + url } target="_blank" rel="noopener noreferrer">
+                     <a href={ socialMediaLinks.instagram + url } target="_blank" rel="noopener noreferrer">
                         <FaInstagram
                         size={ 30 }
                         color='#FFFFFF'        

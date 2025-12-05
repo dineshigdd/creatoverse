@@ -13,18 +13,22 @@ import { supabase } from './client'
 
 function App() {
   const [ creators , setCreators ] = useState([]);
+   
+
+  
 
   useEffect (()=>{
     const  fetchCreators = async ()=>{
         const { data, error } = await supabase
         .from('creators')
         .select('*')
+        
 
         if(error){
           console.log("error",error)
           return;
         }
-      console.log( data)
+     
       setCreators(data);    
   }
   fetchCreators();
@@ -36,19 +40,24 @@ function App() {
         element:<Main/>,        
         children:[
         {
-          path:"/",   
-          element:<ShowCreators creators = { creators }/>
+          index:true,   
+          element:<ShowCreators creators = { creators.slice(0,5)} />        
         },
         {
-          path:"add-creator", 
+          path:"creators", 
+          element:<ShowCreators creators = { creators } />        
+        },
+        
+        {
+          path:"new", 
           element:<AddCreator />
         },
         { 
-          path:"edit-creators",
+          path:"edit",
           element:<EditCreators />
         },
         {
-          path:"view-creator/:id",
+          path:"creator/:id",
           element:<ViewCreator />
         }    
       ]
