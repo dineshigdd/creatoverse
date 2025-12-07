@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { supabase } from '../client'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import Modal from '../components/Modal';
 
-
-function EditCreators() {
+function EditCreators({ onSave }) {
   const [ name, setName ] = useState("");
   const [ url, setURL ] = useState("");
   const [ description, setDescription ] = useState("");
   const [ imageURL, setimageURL ] = useState("");  
   const { id } = useParams();
+  const navigate = useNavigate();
+  // const [ state, setState ] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect (()=>{
     
@@ -29,11 +32,9 @@ function EditCreators() {
           if(error){
             console.log("error",error)            
             return;
-          }      
-      
+          }        
          
-          
-         
+
     }
     fetchCreator();  
    
@@ -46,9 +47,43 @@ function EditCreators() {
     const { error } = await supabase
       .from('creators')
       .update({ name , url , description , imageURL })
-      .eq('id', id )
+      .eq('id', id );
+
+     if(error){
+      console.log("error", error);
+      return;
     }
-  
+
+     onSave();
+     navigate('/');
+    
+    }
+
+    
+  const deleteCreator = async () =>{
+    
+     const { error } = await supabase
+      .from('creators')
+      .delete()
+      .eq('id',id)
+
+      if(error){   
+        console.log("error", error);
+        return;
+      }
+      
+    setIsModalOpen(false);
+    onSave();
+    navigate('/')
+      
+
+  }
+
+  const closeModal = ()=>{
+   setIsModalOpen( false)
+  }
+
+
 
   return (
     <div className='container'>
@@ -62,15 +97,27 @@ function EditCreators() {
         </label>
 
 
-        <label>Description
-          <input type='text' value = { description } onChange= { ( e )=> setDescription( e.target.value )}/>
+        <label>Description          
+          <textarea value = { description } onChange={ ( e )=> setDescription( e.target.value )}/>    
         </label>
 
        <label>image Url
           <input type='text' value={ imageURL } onChange={ ( e )=> setimageURL( e.target.value )}/>
         </label>
-        <button type='submit'>Submit</button>
+        <div className='grid'>
+            <button className='submit-button'  type='submit'>Submit</button>
+            <button type='button' onClick={ ()=> setIsModalOpen( true )}           
+              className='delete-button'>Delete
+            </button>
+        </div>        
       </form>
+   
+    {isModalOpen && (
+      <Modal 
+        closeModal={closeModal}
+        deleteCreator={deleteCreator}
+      />
+    )}
     </div>
   )
 }

@@ -1,8 +1,6 @@
-/* .container{
-   display:flex;
-   justify-content: center;
-   margin-top: 50px;
-} */
+.profile-container{
+   flex-direction: column;   
+}
 
 .profile-container{
     grid-template-columns: 1fr 1fr;
@@ -24,7 +22,7 @@
     border-radius:7px;
 } 
 
-.name{
+.profile-name{
     text-transform: uppercase;
     font-size: 2.5em;
     color: #5185b3;
@@ -44,3 +42,26 @@
 .social-media-links-container a span{
     margin-left: 15px;
 } 
+
+.profile-button-container{
+    display: block;
+    text-align: center; 
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.edit-button{
+    background-color: #017FC0;
+}
+
+.edit-button:hover{
+    background-color: #036A9E;
+}
+
+.delete-button{
+    background-color: #FF605C;
+}
+
+.delete-button:hover{
+    background-color: #EE402E;
+}

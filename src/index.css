@@ -50,6 +50,21 @@ h1 {
    margin-top: 50px;
 }
 
+button, [role=button], button[type=submit]{    
+    margin: 30px;
+    background-color: #437390;
+    font-weight: 700;
+    border-color: #437390;   
+    text-transform: uppercase;
+    width: 13em;
+    
+}
+
+
+[role=button]:hover{    
+    border-color: whitesmoke;
+    
+}
 
 /*
 button {

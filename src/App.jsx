@@ -1,22 +1,24 @@
-import { NavLink } from 'react-router'
 import { useRoutes } from 'react-router-dom'
 import Main from './pages/Main'
 import ShowCreators from './pages/ShowCreators'   
 import AddCreator from './pages/AddCreator'
 import EditCreators from './pages/EditCreators'
 import ViewCreator from './pages/ViewCreator'
-import { Children, useEffect, useState } from 'react'
+import {  useEffect, useState } from 'react'
 import { supabase } from './client'
+
+
+
+
 
 // import './App.css'
 
 
 function App() {
   const [ creators , setCreators ] = useState([]);
-   
+  const [ revalidateKey , setRevalidateKey ] = useState(0);
 
-  
-
+ 
   useEffect (()=>{
     const  fetchCreators = async ()=>{
         const { data, error } = await supabase
@@ -32,7 +34,7 @@ function App() {
       setCreators(data);    
   }
   fetchCreators();
-  },[]);
+  },[revalidateKey]);
 
   let element = useRoutes([ 
         {
@@ -50,11 +52,12 @@ function App() {
         
         {
           path:"new", 
-          element:<AddCreator />
+          element:<AddCreator onSave = { ()=> setRevalidateKey( k => k + 1)}/>
         },
         { 
           path:"edit/:id",
-          element:<EditCreators />
+          element:<EditCreators onSave = { ()=> setRevalidateKey( k => k + 1)} />
+          // element:<EditCreators  />
         },
         {
           path:"creator/:id",

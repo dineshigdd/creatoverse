@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ShowCreators from './ShowCreators'
 import AddCreator from './AddCreator'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet  } from 'react-router-dom'
 import '../styles/Main.css'
 
 

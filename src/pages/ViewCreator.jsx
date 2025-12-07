@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa'
 import socialMediaBaseUrl from '../config/baseUrls.json'
 import '../styles/ViewCreator.css'
+import { Link } from 'react-router-dom'
 
 function ViewCreator() {
 
@@ -44,14 +45,14 @@ function ViewCreator() {
 
 
   return (
-    <div className='container'>                
+    <div className='container profile-container'>                
         {
             creator?.map( creator => (<figure className='grid profile-container' key={ creator.id }>
                   <div className='profile-image-container'>
                         <img src={ creator.imageURL } />
                   </div>
                   <div>
-                        <h2 className='name'>{ creator.name }</h2>
+                        <h2 className='profile-name'>{ creator.name }</h2>
                         <p>{ creator.description }</p>
                         <div className='social-media-links-container'>
                               <a href={ socialMediaLinks.youtube + creator.url  }
@@ -83,13 +84,17 @@ function ViewCreator() {
                                   /> 
                                   <span>@{  creator.url }</span>                    
                               </a>
-                          </div>
-                      </div>
+                        </div>
+                    </div>                    
               </figure>
               
-            ))
-        
-        }      
+            ))        
+        }
+        <div className='profile-button-container'>
+                      <Link to={`/edit/${ id }`} className='edit-button' role="button">Edit</Link>
+                      <button className='delete-button'>Delete</button>        
+        </div>      
+       
     </div>
   )
 }
