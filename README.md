@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 - [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
 - [x] **Each content creator has their own unique URL**
 - [x] **The user can edit a content creator to change their name, url, or description**
-- [ ] **The user can delete a content creator**
+- [x] **The user can delete a content creator**
 - [x] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
 The following **optional** features are implemented:
@@ -29,7 +29,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] List anything else that you added to improve the site's functionality!
+- revalidation: after CRUD operations, the new data will be refetched from the database to update the UI with the updated data
 
 ## Video Walkthrough
 
@@ -47,6 +48,7 @@ GIF created with ...  👉🏿 GIF tool here
 ## Notes
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
+When I am developing this app , I faced some challeneges. 
 
 ## License
 
