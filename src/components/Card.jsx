@@ -35,6 +35,7 @@ function Card( { creator } ) {
                             </div>  
                       </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                     <div className='card-social-media-links-container'>
+                      { url.youtube && 
                       <a href={  socialMediaLinks.youtube + '@'+ url.youtube  } target="_blank" rel="noopener noreferrer">
                         <FaYoutube
                         size={ 30 }
@@ -42,18 +43,23 @@ function Card( { creator } ) {
                              
                       />                      
                     </a>
+                    }
+                     { url.x && 
                      <a href={ socialMediaLinks.x +  url.x } target="_blank" rel="noopener noreferrer">
                         <FaTwitter
                         size={ 30 }
                         color='#FFFFFF'        
                       />   
                     </a> 
-                     <a href={ socialMediaLinks.instagram + url.instagram } target="_blank" rel="noopener noreferrer">
+                    }
+                     { url.instagram && 
+                      <a href={ socialMediaLinks.instagram + url.instagram } target="_blank" rel="noopener noreferrer">
                         <FaInstagram
                         size={ 30 }
                         color='#FFFFFF'        
                       />   
                     </a> 
+                    }
                   </div>
                   <div className='card-description'>{ `${ description.substring(0,100)}...`}</div>           
             </div>

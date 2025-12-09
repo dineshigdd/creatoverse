@@ -4,7 +4,7 @@
 
 .profile-container{
     grid-template-columns: 1fr 1fr;
-    
+    margin-bottom: 50px;
 }
 
 .profile-image-container{
@@ -17,7 +17,7 @@
 
 .profile-image-container img , .no-image-placeholder{
     max-width: 65%;
-    min-height:82%;
+    min-height:78%;
     border: solid 2px #5185b3;
     border-radius:7px;
 } 
@@ -31,12 +31,13 @@
 .social-media-links-container{
     display: flex;
     flex-direction: column;
-    height: 10em;
+    max-height:10em;
     justify-content: space-between;
 }
 
 .social-media-links-container a{   
     color: #FFFF;  
+    padding-bottom: 5px;
 }
 
 .social-media-links-container a span{

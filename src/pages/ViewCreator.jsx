@@ -67,26 +67,29 @@ function ViewCreator() {
                         <h2 className='profile-name'>{ creator.name }</h2>
                         <p>{ creator.description }</p>
                         <div className='social-media-links-container'>
-                              <a href={ socialMediaLinks.youtube + '@' + creator.url.youtube  }
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                    <FaYoutube
-                                    size={ 30 }
-                                    color='#FFFFFF'                         
-                                  /> 
-                                  <span>@{  creator.url.youtube }</span>                    
-                              </a>
-                            
-                            <a href={ socialMediaLinks.x +  creator.url.x  }
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                    <FaTwitter
-                                    size={ 30 }
-                                    color='#FFFFFF'                         
-                                  /> 
-                                  <span>@{  creator.url.x }</span>                    
-                              </a>
-
+                              { creator.url.youtube  && 
+                                <a href={ socialMediaLinks.youtube + '@' + creator.url.youtube  }
+                                  target="_blank" 
+                                  rel="noopener noreferrer">
+                                      <FaYoutube
+                                      size={ 30 }
+                                      color='#FFFFFF'                         
+                                    /> 
+                                    <span>@{  creator.url.youtube }</span>                    
+                                </a>
+                            }
+                            { creator.url.x  && 
+                              <a href={ socialMediaLinks.x +  creator.url.x  }
+                                  target="_blank" 
+                                  rel="noopener noreferrer">
+                                      <FaTwitter
+                                      size={ 30 }
+                                      color='#FFFFFF'                         
+                                    /> 
+                                    <span>@{  creator.url.x }</span>                    
+                                </a>
+                            }
+                            { creator.url.instagram  &&
                               <a href={ socialMediaLinks.instagram + creator.url.instagram  }
                                 target="_blank" 
                                 rel="noopener noreferrer">
@@ -96,6 +99,7 @@ function ViewCreator() {
                                   /> 
                                   <span>@{  creator.url.instagram }</span>                    
                               </a>
+                            } 
                         </div>
                     </div>                    
               </figure>
