@@ -15,9 +15,9 @@
     
 }
 
-.profile-image-container img{
+.profile-image-container img , .no-image-placeholder{
     max-width: 65%;
-    height: 500px;
+    min-height:82%;
     border: solid 2px #5185b3;
     border-radius:7px;
 } 
@@ -44,14 +44,17 @@
 } 
 
 .profile-button-container{
-    display: block;
-    text-align: center; 
-    margin-top: 5em;
-    margin-bottom: 2em;
+    position: relative;
+    right: -25px;    
+    text-align: right;
+   
 }
 
 .edit-button{
     background-color: #017FC0;
+    max-width: fit-content;
+    max-height: fit-content;
+    font-size: 0.75em
 }
 
 .edit-button:hover{

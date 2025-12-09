@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Modal.css'
 
-function Modal({ closeModal, deleteCreator , setIsModalOpen }) {
+function Modal({ closeModal, deleteCreator , name }) {
   return (
     <dialog open>
         <article>

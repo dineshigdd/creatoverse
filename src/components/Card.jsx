@@ -35,20 +35,20 @@ function Card( { creator } ) {
                             </div>  
                       </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                     <div className='card-social-media-links-container'>
-                      <a href={ socialMediaLinks.youtube + url } target="_blank" rel="noopener noreferrer">
+                      <a href={  socialMediaLinks.youtube + '@'+ url.youtube  } target="_blank" rel="noopener noreferrer">
                         <FaYoutube
                         size={ 30 }
                         color='#FFFFFF'   
                              
                       />                      
                     </a>
-                     <a href={ socialMediaLinks.x + url } target="_blank" rel="noopener noreferrer">
+                     <a href={ socialMediaLinks.x +  url.x } target="_blank" rel="noopener noreferrer">
                         <FaTwitter
                         size={ 30 }
                         color='#FFFFFF'        
                       />   
                     </a> 
-                     <a href={ socialMediaLinks.instagram + url } target="_blank" rel="noopener noreferrer">
+                     <a href={ socialMediaLinks.instagram + url.instagram } target="_blank" rel="noopener noreferrer">
                         <FaInstagram
                         size={ 30 }
                         color='#FFFFFF'        

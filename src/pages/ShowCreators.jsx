@@ -14,10 +14,6 @@ function ShowCreators( { creators }) {
                             <Card 
                              key={creator.id  }
                              creator = { creator }
-                            //  name={creator.name}
-                            //  url={creator.url}
-                            //  description={creator.description}
-                            //  imageURL={creator.imageURL}
                             />         
                         
             ))}

@@ -5,12 +5,11 @@ import Modal from '../components/Modal';
 
 function EditCreators({ onSave }) {
   const [ name, setName ] = useState("");
-  const [ url, setURL ] = useState("");
+  const [ url, setURL ] = useState({ youtube: '', x: '', instagram: '' });
   const [ description, setDescription ] = useState("");
   const [ imageURL, setimageURL ] = useState("");  
   const { id } = useParams();
   const navigate = useNavigate();
-  // const [ state, setState ] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect (()=>{
@@ -92,9 +91,20 @@ function EditCreators({ onSave }) {
           <input type='text' value={ name } onChange={ ( e )=> setName( e.target.value )} />
         </label>
 
-        <label>URL
-          <input type='text' value={ url } onChange={ ( e )=> setURL( e.target.value )}/>
+        <label>Social Media Links
+          <p>Enter Social Media handle without the '@'</p>
+         </label>
+         <label>YouTube
+            <input type='text' value={ url.youtube } placeholder='youTube' onChange={ ( e )=> setURL( prev => ({...prev, youtube: e.target.value }) ) }/>
+          </label>
+
+        <label>x ( Twitter )
+          <input type='text' value={ url.x } placeholder='X' onChange={ ( e )=> setURL( prev => ({...prev, x: e.target.value }) ) }/>
         </label>
+         
+         <label>Instagram
+          <input type='text' value= { url.instagram } placeholder='Instagram' onChange={ ( e )=> setURL( prev => ({...prev, instagram: e.target.value }) ) }/>
+         </label>
 
 
         <label>Description          
@@ -116,6 +126,7 @@ function EditCreators({ onSave }) {
       <Modal 
         closeModal={closeModal}
         deleteCreator={deleteCreator}
+        name = { name }
       />
     )}
     </div>

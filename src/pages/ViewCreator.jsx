@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { supabase } from '../client'
 import { useParams } from 'react-router-dom';
-import { FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaYoutube, FaTwitter, FaInstagram, FaPen } from 'react-icons/fa'
 import socialMediaBaseUrl from '../config/baseUrls.json'
 import '../styles/ViewCreator.css'
 import { Link } from 'react-router-dom'
+import profileImagePlaceholder from '../assets/profileImagePlaceholder.png';
 
 function ViewCreator() {
 
@@ -49,40 +50,51 @@ function ViewCreator() {
         {
             creator?.map( creator => (<figure className='grid profile-container' key={ creator.id }>
                   <div className='profile-image-container'>
-                        <img src={ creator.imageURL } />
+                        { creator.imageURL ? <img src={ creator.imageURL } /> : 
+                        <img src={ profileImagePlaceholder } className='no-image-placeholder' />
+                        
+                        }
+                        <div className='profile-button-container'>
+                            <Link to={`/edit/${ creator.id }`} className='edit-button' role="button">
+                                Edit Profile <FaPen 
+                                        size={  16 }
+                                        color="#FFFFFF"
+                                      />
+                          </Link>                        
+                   </div> 
                   </div>
                   <div>
                         <h2 className='profile-name'>{ creator.name }</h2>
                         <p>{ creator.description }</p>
                         <div className='social-media-links-container'>
-                              <a href={ socialMediaLinks.youtube + creator.url  }
+                              <a href={ socialMediaLinks.youtube + '@' + creator.url.youtube  }
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     <FaYoutube
                                     size={ 30 }
                                     color='#FFFFFF'                         
                                   /> 
-                                  <span>@{  creator.url }</span>                    
+                                  <span>@{  creator.url.youtube }</span>                    
                               </a>
                             
-                            <a href={ socialMediaLinks.x + creator.url  }
+                            <a href={ socialMediaLinks.x +  creator.url.x  }
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     <FaTwitter
                                     size={ 30 }
                                     color='#FFFFFF'                         
                                   /> 
-                                  <span>@{  creator.url }</span>                    
+                                  <span>@{  creator.url.x }</span>                    
                               </a>
 
-                              <a href={ socialMediaLinks.instagram + creator.url  }
+                              <a href={ socialMediaLinks.instagram + creator.url.instagram  }
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     <FaInstagram
                                     size={ 30 }
                                     color='#FFFFFF'                         
                                   /> 
-                                  <span>@{  creator.url }</span>                    
+                                  <span>@{  creator.url.instagram }</span>                    
                               </a>
                         </div>
                     </div>                    
@@ -90,11 +102,7 @@ function ViewCreator() {
               
             ))        
         }
-        <div className='profile-button-container'>
-                      <Link to={`/edit/${ id }`} className='edit-button' role="button">Edit</Link>
-                      <button className='delete-button'>Delete</button>        
-        </div>      
-       
+                      
     </div>
   )
 }

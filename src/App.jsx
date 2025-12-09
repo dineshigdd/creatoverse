@@ -30,11 +30,13 @@ function App() {
           console.log("error",error)
           return;
         }
-     
+
       setCreators(data);    
   }
   fetchCreators();
-  },[revalidateKey]);
+  
+  },[ revalidateKey ]);
+
 
   let element = useRoutes([ 
         {
