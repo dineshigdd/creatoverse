@@ -19,7 +19,7 @@ function App() {
         const { data, error } = await supabase
         .from('creators')
         .select('*')
-        
+        .order('created_at', { ascending: true });
 
         if(error){
           console.log("error",error)
