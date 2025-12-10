@@ -20,9 +20,7 @@ function AddCreator({onSave }) {
       .from('creators')
       .insert([
          { name , url , description , imageURL }
-      ])
-      .select()
-      .single();  
+      ]);
 
      
     if(error){
