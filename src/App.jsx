@@ -6,12 +6,7 @@ import EditCreators from './pages/EditCreators'
 import ViewCreator from './pages/ViewCreator'
 import {  useEffect, useState } from 'react'
 import { supabase } from './client'
-
-
-
-
-
-// import './App.css'
+import './App.css'
 
 
 function App() {
@@ -60,7 +55,6 @@ function App() {
         { 
           path:"edit/:id",
           element:<EditCreators onSave = { ()=> setRevalidateKey( k => k + 1)} />
-          // element:<EditCreators  />
         },
         {
           path:"creator/:id",
@@ -68,8 +62,15 @@ function App() {
         }    
       ]
     },
-    // Any route *outside* this structure (like a 404 page) would go here
-      // { path: "*", element: <NotFound /> }
+    // handle 404 page Not found error
+      { path: "*", element: <div 
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          fontSsize: '24px',
+        }}>Page Not Found</div> }
   ]);
 
 
