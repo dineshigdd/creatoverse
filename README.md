@@ -35,8 +35,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<!-- 👉🏿<img src='#' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
-<img src='https://via.placeholder.com/100' title='Test Image Placeholder' width='100' alt='A small gray square for testing' />
+👉🏿<img src='http://i.imgur.com/rsBVO7c.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 GIF tool here
 <!-- Recommended tools:
