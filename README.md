@@ -36,9 +36,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://i.imgur.com/rsBVO7c.gif' title='Video Walkthrough' width='600' alt='Video Walkthrough' />
+<img src='https://jumpshare.com/s/MvJmLTRpzqBj4nv3SjHA' title='Video Walkthrough' width='600' alt='Video Walkthrough' />
 
-
+<img src="https://pouch.jumpshare.com/preview/L-dVUWfL4WHnbBgR3pp2Uq3WiGX9u9-LQrsAG2DXDw6AAju4AwHVgxBpY6vKBmh4shM8JTaMQ4e4mbUpQkc1iUNOKKnpjKaPoyIxmVkhfU0" style="image-rendering:-webkit-optimize-contrast;">
 ## Notes
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
