@@ -87,6 +87,7 @@ function EditCreators({ onSave }) {
   return (
     <div className='container'>
       <form onSubmit={ handleSubmit }>
+         <h2>Edit Creator</h2>
         <label>Name
           <input type='text' value={ name } onChange={ ( e )=> setName( e.target.value )} />
         </label>
